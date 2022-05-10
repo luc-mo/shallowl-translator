@@ -1,0 +1,140 @@
+@use './utils';
+
+@font-face {
+  font-family: Raleway;
+  src: url('../fonts/Raleway.ttf') format('truetype');
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Raleway, sans-serif;
+  outline: none;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  height: 100vh;
+  padding: 2rem;
+  background-color: #042B48;
+  color: white;
+}
+
+::-webkit-scrollbar {
+  width: 1rem;
+}
+
+::-webkit-scrollbar-track {
+  box-shadow: 0 0 5px rgb(144, 144, 150, 0.5) inset;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #09f;
+  box-shadow: 0 0 5px #555555 inset;
+  border-radius: 10px;
+}
+
+.button {
+  @include utils.center-content;
+  height: 4rem;
+  padding: 0 2rem;
+  font-size: 1.8rem;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  &:hover {
+    opacity: 0.95;
+  }
+  &:active {
+    opacity: 0.9;
+  }
+  &:disabled {
+    @include utils.disabled-item;
+  }
+}
+
+.textarea {
+  position: relative;
+  padding: 1.6rem 1.8rem;
+  font-size: 1.8rem;
+  border: none;
+  border-radius: 4px;
+  resize: none;
+  &::-webkit-input-placeholder {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    color: #242424;
+    font-size: 2rem;
+    transform: translate(-50%, -50%);
+  }
+  &:disabled {
+    background-color: #ffffff;
+  }
+}
+
+.select--container {
+  position: relative;
+  min-width: 10.9rem;
+  max-width: 16rem;
+  flex-grow: 1;
+  &:hover {
+    opacity: 0.95;
+  }
+  &:active {
+    opacity: 0.9;
+  }
+}
+
+.select {
+  height: 4rem;
+  padding-left: 1rem;
+  font-size: 1.4rem;
+  border: none;
+  border-radius: 4px;
+  appearance: none;
+  cursor: pointer;
+  &:disabled {
+    @include utils.disabled-item;
+  }
+}
+
+.select__arrow--container {
+  @include utils.center-content;
+  position: absolute;
+  right: -1px;
+  top: 0;
+  width: 2rem;
+  height: 100%;
+  background-color: #0073C0;
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+  &:disabled {
+    @include utils.disabled-item;
+  }
+}
+
+.select__arrow {
+  cursor: pointer;
+  &:disabled {
+    @include utils.disabled-item;
+  }
+}
+
+.option {
+  height: 10rem;
+}
+
+.disabled {
+  @include utils.disabled-item;
+}

@@ -1,0 +1,12 @@
+{
+  "name": "deepl-extension",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "styles": "sass --watch sass:css -s compressed --no-source-map"
+  },
+  "devDependencies": {
+    "sass": "^1.51.0"
+  }
+}

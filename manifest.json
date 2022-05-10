@@ -1,0 +1,16 @@
+{
+  "manifest_version": 2,
+  "name": "ShallowL Translator",
+  "description": "Unofficial DeepL translator for Opera",
+  "version": "0.1.0",
+  "sidebar_action": {
+    "default_title": "ShallowL Translator",
+    "default_panel": "index.html",
+    "default_icon": "images/256.png"
+  },
+  "icons": {
+    "64": "images/64.png",
+    "128": "images/128.png",
+    "256": "images/256.png"
+  }
+}
